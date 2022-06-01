@@ -1,0 +1,13 @@
+
+function sortedTodos(status) {
+  console.log(status)
+  console.log(typeof gTodos[0][status])
+  gTodos.sort((a, b) => {
+    if (typeof a[status] === "number") {
+      return a[status] - b[status] ? 1 : -1
+    }
+    if (typeof a[status] === "string") {
+      return a[status] < b[status] ? 1 : -1
+    }
+  })
+}
