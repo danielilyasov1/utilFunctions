@@ -1,0 +1,11 @@
+function showTime(time) {
+  var date = new Date(time)
+  date = date.toString()
+  //'Wed Jun 01 2022 15:10:52 GMT+0300 (Israel Daylight Time)'
+  date = date.split(" ")
+  //(9) ['Wed', 'Jun', '01', '2022', '15:10:52', 'GMT+0300', '(Israel', 'Daylight', 'Time)']
+  date = date.splice(0, 5)
+  //(5) ['Wed', 'Jun', '01', '2022', '15:10:52']
+
+  return date
+}
