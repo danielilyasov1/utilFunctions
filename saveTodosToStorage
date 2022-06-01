@@ -1,0 +1,3 @@
+function _saveTodosToStorage() {
+  saveToStorage(STORAGE_KEY, gTodos)
+}
