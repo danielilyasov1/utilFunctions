@@ -9,3 +9,8 @@ function loadFromStorage(key) {
     const str = localStorage.getItem(key)
     return JSON.parse(str)
 }
+
+
+function _saveItemsToStorage() {
+  saveToStorage(STORAGE_KEY, gItems);
+}
