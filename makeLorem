@@ -1,0 +1,25 @@
+function getLoremIpsum(wordsCount){
+    var sentence = ''
+
+    for(var i = 0 ; i < wordsCount ; i++){
+        sentence += getWord() +' '
+    }
+    
+    return sentence
+}
+
+console.log(getLoremIpsum(4))
+
+function getWord(){
+    var word = ''
+
+    for(var i = 0 ; i < getRandomInt(3,6) ; i++){
+        word += String.fromCharCode(getRandomInt(97,122))//letters.charAt(getRandomInt(0,letters.length))
+    }
+    
+    return word
+}
+
+function getRandomInt(min,max){
+    return Math.floor(Math.random() * (max - min) + min)
+}
